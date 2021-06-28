@@ -163,13 +163,13 @@ def mcm(tn, fp, fn, tp):
     
     Parameters
     ----------
-    tn : integer
+    TN : integer
         True Negative
-    fp: integer
+    FP: integer
         False Positive
-    fn: integer
+    FN: integer
         False Negative
-    tp: integer
+    TP: integer
         True Positive
    
     Returns
@@ -250,13 +250,13 @@ def mcm(tn, fp, fn, tp):
     
     Parameters
     ----------
-    tn : integer
+    TN : integer
         True Negative
-    fp: integer
+    FP: integer
         False Positive
-    fn: integer
+    FN: integer
         False Negative
-    tp: integer
+    TP: integer
         True Positive
     
     Returns
