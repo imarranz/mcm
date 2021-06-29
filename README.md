@@ -137,13 +137,7 @@ tn, fp, fn, tp = confusion_matrix(y_true = data.y_true,
 
 ### Sensitivity, Recall and True Positive Rate (TPR)
 
-$\dfrac{TP}{TP + FN}$
-
-<img src="https://render.githubusercontent.com/render/math?math=\dfrac{TP}{TP + FN}">
-
-```math
-\dfrac{TP}{TP + FN}
-```
+$$\dfrac{TP}{TP + FN}$$
     
 ### Specificity and True Negative Rate (TNR)
 
