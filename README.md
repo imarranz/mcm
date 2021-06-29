@@ -140,6 +140,10 @@ tn, fp, fn, tp = confusion_matrix(y_true = data.y_true,
 $\dfrac{TP}{TP + FN}$
 
 <img src="https://render.githubusercontent.com/render/math?math=\dfrac{TP}{TP + FN}">
+
+```math
+\dfrac{TP}{TP + FN}
+```
     
 ### Specificity and True Negative Rate (TNR)
 
