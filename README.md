@@ -131,9 +131,45 @@ tn, fp, fn, tp = confusion_matrix(y_true = data.y_true,
 ```
 
 
-
-
     (13, 5, 10, 37)
+    
+## Metrics
+
+### Sensitivity, Recall and True Positive Rate (TPR)
+
+$$\dfrac{TP}{TP + FN}$$
+    
+### Specificity and True Negative Rate (TNR)
+
+$$\dfrac{TN}{TN + FP}$$
+
+### Precision and Positive Predictive Value (PPV)
+
+$$\dfrac{TP}{TP + FP}$$
+
+### Negative Predictive Value (NPV)
+
+$$\dfrac{TN}{TN + FN}$$
+
+### False Negative Rate (FNR)
+
+$$\dfrac{FN}{FN + TP}$$
+
+### False Positive Rate (FPR)
+
+$$\dfrac{FP}{FP + TN}$$
+
+### False Discovery Rate (FDR)
+
+$$\dfrac{FP}/{FP + TP}$$
+
+### Accuracy
+
+$$\dfrac{TP + TN}{TP + TN + FP + FN}$$
+
+### F1 Score
+
+$$\dfrac{2\cdot TP}{2\cdot TP + FP + FN}$$
 
 
 
@@ -280,7 +316,6 @@ def mcm(tn, fp, fn, tp):
                                   labels = ['Negative', 'Positive']).ravel()
 
 The arguments of `mcm` function are: true positive (tn), false positive (fp), false negative (fn) and true positive (tp) is this order.
-
 
 ```python
 mcm(tn, fp, fn, tp)
