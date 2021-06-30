@@ -130,16 +130,21 @@ tn, fp, fn, tp = confusion_matrix(y_true = data.y_true,
 (tn, fp, fn, tp)
 ```
 
-
     (13, 5, 10, 37)
     
 ## Metrics
 
+Metrics are statistical measures of the performance of a binary classification model.
+
 ### Sensitivity, Recall and True Positive Rate (TPR)
+
+Sensitivity refers to the test's ability to correctly detect negative class who do have the condition.
 
 $$\dfrac{TP}{TP + FN}$$
     
 ### Specificity and True Negative Rate (TNR)
+
+Specificity relates to the test's ability to correctly reject positive class without a condition. 
 
 $$\dfrac{TN}{TN + FP}$$
 
