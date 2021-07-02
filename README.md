@@ -141,6 +141,8 @@ Metrics are statistical measures of the performance of a binary classification m
 Sensitivity refers to the test's ability to correctly detect negative class who do have the condition.
 
 $$\dfrac{TP}{TP + FN}$$
+
+![formula](https://render.githubusercontent.com/render/math?math=\dfrac{TP}{TP%20BFN})
     
 ### Specificity and True Negative Rate (TNR)
 
