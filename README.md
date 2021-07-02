@@ -142,7 +142,7 @@ Sensitivity refers to the test's ability to correctly detect negative class who 
 
 $$\dfrac{TP}{TP + FN}$$
 
-![formula](https://render.githubusercontent.com/render/math?math=\Large\mbox{Sensitivity}=\dfrac{TP}{TP%2BFN})
+![formula](https://render.githubusercontent.com/render/math?math=\Large Sensitivity=\dfrac{TP}{TP%2BFN})
     
 ### Specificity and True Negative Rate (TNR)
 
