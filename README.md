@@ -142,13 +142,15 @@ Sensitivity refers to the test's ability to correctly detect negative class who 
 
 $$\dfrac{TP}{TP + FN}$$
 
-![formula](https://render.githubusercontent.com/render/math?math=\dfrac{TP}{TP%20BFN})
+![formula](https://render.githubusercontent.com/render/math?math=\Large\dfrac{TP}{TP%2BFN})
     
 ### Specificity and True Negative Rate (TNR)
 
 Specificity relates to the test's ability to correctly reject positive class without a condition. 
 
 $$\dfrac{TN}{TN + FP}$$
+
+![formula](https://render.githubusercontent.com/render/math?math=\Large\dfrac{TN}{TN%2BFP})
 
 ### Precision and Positive Predictive Value (PPV)
 
