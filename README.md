@@ -140,46 +140,41 @@ Metrics are statistical measures of the performance of a binary classification m
 
 Sensitivity refers to the test's ability to correctly detect negative class who do have the condition.
 
-$$\dfrac{TP}{TP + FN}$$
-
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20Sensitivity=\dfrac{TP}{TP%2BFN})
     
 ### Specificity and True Negative Rate (TNR)
 
 Specificity relates to the test's ability to correctly reject positive class without a condition. 
 
-$$\dfrac{TN}{TN + FP}$$
-
-![formula](https://render.githubusercontent.com/render/math?math=\Large\dfrac{TN}{TN%2BFP})
+![formula](https://render.githubusercontent.com/render/math?math=\Large%20Specificity=\dfrac{TN}{TN%2BFP})
 
 ### Precision and Positive Predictive Value (PPV)
 
-$$\dfrac{TP}{TP + FP}$$
+![formula](https://render.githubusercontent.com/render/math?math=\Large%20Positive%20Predictive%20Value=\dfrac{TP}{TP%2BFP})
 
 ### Negative Predictive Value (NPV)
 
-$$\dfrac{TN}{TN + FN}$$
+![formula](https://render.githubusercontent.com/render/math?math=\Large%20Negative%20Predictive%20Value=\dfrac{TN}{TN%2BFN})
 
 ### False Negative Rate (FNR)
 
-$$\dfrac{FN}{FN + TP}$$
+![formula](https://render.githubusercontent.com/render/math?math=\Large%20False%20Negative%20Rate=\dfrac{FN}{FN%2BTP})
 
 ### False Positive Rate (FPR)
 
-$$\dfrac{FP}{FP + TN}$$
+![formula](https://render.githubusercontent.com/render/math?math=\Large%20False%20Positive%20Rate=\dfrac{FP}{FP%2BTN})
 
 ### False Discovery Rate (FDR)
 
-$$\dfrac{FP}/{FP + TP}$$
+![formula](https://render.githubusercontent.com/render/math?math=\Large%20False%20Discovery%20Rate=\dfrac{FP}{FP%2BTP})
 
 ### Accuracy
 
-$$\dfrac{TP + TN}{TP + TN + FP + FN}$$
+![formula](https://render.githubusercontent.com/render/math?math=\Large%20Accuracy=\dfrac{TP%2BTN}{TP%2BTN%2BFP%2BFN})
 
 ### F1 Score
 
-$$\dfrac{2\cdot TP}{2\cdot TP + FP + FN}$$
-
+![formula](https://render.githubusercontent.com/render/math?math=\Large%20F1%20Score=\dfrac{2%20\cdot%20TP}{2%20\cdot%20TP%2BFP%2BFN})
 
 
 ## MCM function
