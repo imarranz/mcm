@@ -18,19 +18,19 @@ def mcm(tn, fp, fn, tp):
     
     Parameters
     ----------
-    tn : integer
-        True Negative
-    fp: integer
-        False Positive
-    fn: integer
-        False Negative
-    tp: integer
-        True Positive
+    TN : integer
+         True Negative
+    FP : integer
+         False Positive
+    FN : integer
+         False Negative
+    TP : integer
+         True Positive
    
     Returns
     -------
-    sum : float
-        Sum of values
+    sum : DataFrame
+          DataFrame with several metrics
     
     Notes
     -----
