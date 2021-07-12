@@ -2,9 +2,9 @@
 
 ## Introduction
 
-The `mcm` function is a tool for analyzed different metrics from a confusion matrix. 
+The `mcm` function is a simple tool for analyzed different metrics from a confusion matrix. Can be very useful to analyze the performance of a binary classification model. 
 
-This function depends of `pandas` and the function `confusion_matrix` from `sklearn.metrics`.
+This function depends of `pandas` and the function `confusion_matrix` from `sklearn.metrics`. With `confusion_matrix` the True Negative (TN) cases, True Positive (TP) cases, False Negative (FN) cases and False Positive (FP cases are calculated).
 
 
 ```python
