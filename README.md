@@ -140,7 +140,7 @@ Metrics are statistical measures of the performance of a binary classification m
 
 Sensitivity refers to the test's ability to correctly detect negative class who do have the condition.
 
-$$\Large Sensitivity = \dfrac{TP}{TP + FN$$
+$$\Large Sensitivity = \dfrac{TP}{TP + FN}$$
 
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20Sensitivity=\dfrac{TP}{TP%2BFN})
     
