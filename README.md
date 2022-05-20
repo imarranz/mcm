@@ -148,9 +148,13 @@ $$\Large Sensitivity = \dfrac{TP}{TP + FN}$$
 
 Specificity relates to the test's ability to correctly reject positive class without a condition. 
 
+$$\Large Specifity = \dfrac{TN}{TN + FP}$$
+
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20Specificity=\dfrac{TN}{TN%2BFP})
 
 ### Precision and Positive Predictive Value (PPV)
+
+$$\Large Positive Predictive Value = \dfrac{TP}{TP + FP}$$
 
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20Positive%20Predictive%20Value=\dfrac{TP}{TP%2BFP})
 
