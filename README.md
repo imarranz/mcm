@@ -160,9 +160,13 @@ $$\Large Positive Predictive Value = \dfrac{TP}{TP + FP}$$
 
 ### Negative Predictive Value (NPV)
 
+$$\Large Negative Predictive Value = \dfrac{TN}{TN + FN}$$
+
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20Negative%20Predictive%20Value=\dfrac{TN}{TN%2BFN})
 
 ### False Negative Rate (FNR)
+
+$$\Large False Negative Rate = \dfrac{FN}{FN + TP}$$
 
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20False%20Negative%20Rate=\dfrac{FN}{FN%2BTP})
 
