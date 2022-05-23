@@ -190,7 +190,7 @@ $$\Large Accuracy = \dfrac{TP + TN}{TP + TN + FP + FN}$$
 
 ### F1 Score
 
-$$\Large F1 Score = \dfrac{2\cdot TP}{2\cdot TP + FP + FN}$$
+$$\Large \mbox{F1 Score} = \dfrac{2\cdot TP}{2\cdot TP + FP + FN}$$
 
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20F1%20Score=\dfrac{2%20\cdot%20TP}{2%20\cdot%20TP%2BFP%2BFN})
 
