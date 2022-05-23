@@ -172,17 +172,25 @@ $$\Large False Negative Rate = \dfrac{FN}{FN + TP}$$
 
 ### False Positive Rate (FPR)
 
+$$\Large False Positive Rate =  \dfrac{FP}{FP + TN}$$
+
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20False%20Positive%20Rate=\dfrac{FP}{FP%2BTN})
 
 ### False Discovery Rate (FDR)
+
+$$\Large False Discovery Rate = \dfrac{FP}{FP + TP}$$
 
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20False%20Discovery%20Rate=\dfrac{FP}{FP%2BTP})
 
 ### Accuracy
 
+$$\Large Accuracy = \dfrac{TP + TN}{TP + TN + FP + FN}$$
+
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20Accuracy=\dfrac{TP%2BTN}{TP%2BTN%2BFP%2BFN})
 
 ### F1 Score
+
+$$\Large F1 Score = \dfrac{2\cdot TP}{2\cdot TP + FP + FN}$$
 
 ![formula](https://render.githubusercontent.com/render/math?math=\Large%20F1%20Score=\dfrac{2%20\cdot%20TP}{2%20\cdot%20TP%2BFP%2BFN})
 
