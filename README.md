@@ -659,3 +659,13 @@ g = g.set_titles('{col_name}', size = 12)
 
 
 The `mcm` function can help us to analyse a confusion matrix. If this confusion matrix come from a performed model, we can evaluate it with this function: Sensitivity and Specificity as principal metrics.
+
+## pylint
+
+```
+$ pylint mcm.py --good-names=tn.fp,fn,tp
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+```
+
+
