@@ -23,13 +23,13 @@ def mcm(tn, fp, fn, tp):
     Parameters
     ----------
     TN : integer
-         True Negative
+         True Negatives (TN) is the total number of outcomes where the model correctly predicts the negative class.
     FP : integer
-         False Positive
+         False Positives (FP) is the total number of outcomes where the model incorrectly predicts the positive class.
     FN : integer
-         False Negative
+         False Negatives (FN) is the total number of outcomes where the model incorrectly predicts the negative class.
     TP : integer
-         True Positive
+         True Positives (TP) is the total number of outcomes where the model correctly predicts the positive class.
 
     Returns
     -------
@@ -40,6 +40,7 @@ def mcm(tn, fp, fn, tp):
     -----
     https://en.wikipedia.org/wiki/Confusion_matrix
     https://developer.lsst.io/python/numpydoc.html
+    https://www.mathworks.com/help/risk/explore-fairness-metrics-for-credit-scoring-model.html
 
     Examples
     --------
@@ -68,6 +69,9 @@ def mcm(tn, fp, fn, tp):
     df_mcm.append(['False Negative Rate (FNR)', fn / (fn + tp)])
     df_mcm.append(['False Positive Rate (FPR)', fp / (fp + tn)])
     df_mcm.append(['False Discovery Rate (FDR)', fp / (fp + tp)])
+
+    df_mcm.append(['Rate of Positive Predictions (PRR)'], (fp + tp) / (tn + tp + fn + fp))
+    df_mcm.append(['Rate of Negative Predictions (RNP)'], (fn + tn) / (tn + tp + fn + fp))
 
     df_mcm.append(['Accuracy', (tp + tn) / (tp + tn + fp + fn)])
     df_mcm.append(['F1 Score', 2*tp / (2*tp + fp + fn)])
