@@ -168,6 +168,14 @@ $$\Large \mbox{False Positive Rate} =  \dfrac{FP}{FP + TN}$$
 
 $$\Large \mbox{False Discovery Rate} = \dfrac{FP}{FP + TP}$$
 
+### Rate of Positive Predictions (RPP) or Acceptance Rate
+
+$$\Large \mbox{Rate of Positive Predictions} = \dfrac{FP + TP}{TN + TP + FN + FP}$$
+
+### Rate of Negative Predictions (RNP)
+
+$$\Large \mbox{Rate of Negative Predictions} = \dfrac{FN + TN}{TN + TP + FN + FP}$$
+
 ### Accuracy
 
 $$\Large \mbox{Accuracy} = \dfrac{TP + TN}{TP + TN + FP + FN}$$
@@ -203,14 +211,14 @@ def mcm(tn, fp, fn, tp):
     Parameters
     ----------
     TN : integer
-        True Negative
-    FP: integer
-        False Positive
-    FN: integer
-        False Negative
-    TP: integer
-        True Positive
-   
+         True Negatives (TN) is the total number of outcomes where the model correctly predicts the negative class.
+    FP : integer
+         False Positives (FP) is the total number of outcomes where the model incorrectly predicts the positive class.
+    FN : integer
+         False Negatives (FN) is the total number of outcomes where the model incorrectly predicts the negative class.
+    TP : integer
+         True Positives (TP) is the total number of outcomes where the model correctly predicts the positive class.
+
     Returns
     -------
     sum : float
@@ -220,6 +228,7 @@ def mcm(tn, fp, fn, tp):
     -----
     https://en.wikipedia.org/wiki/Confusion_matrix
     https://developer.lsst.io/python/numpydoc.html
+    https://www.mathworks.com/help/risk/explore-fairness-metrics-for-credit-scoring-model.html
     
     Examples
     --------
@@ -247,6 +256,9 @@ def mcm(tn, fp, fn, tp):
     mcm.append(['False Negative Rate (FNR)', fn / (fn + tp)])
     mcm.append(['False Positive Rate (FPR)', fp / (fp + tn)])
     mcm.append(['False Discovery Rate (FDR)', fp / (fp + tp)])
+
+    df_mcm.append(['Rate of Positive Predictions (PRR)'], (fp + tp) / (tn + tp + fn + fp))
+    df_mcm.append(['Rate of Negative Predictions (RNP)'], (fn + tn) / (tn + tp + fn + fp))
     
     mcm.append(['Accuracy', (tp + tn) / (tp + tn + fp + fn)])
     mcm.append(['F1 Score', 2*tp / (2*tp + fp + fn)])
@@ -290,23 +302,24 @@ def mcm(tn, fp, fn, tp):
     Parameters
     ----------
     TN : integer
-        True Negative
-    FP: integer
-        False Positive
-    FN: integer
-        False Negative
-    TP: integer
-        True Positive
-    
+         True Negatives (TN) is the total number of outcomes where the model correctly predicts the negative class.
+    FP : integer
+         False Positives (FP) is the total number of outcomes where the model incorrectly predicts the positive class.
+    FN : integer
+         False Negatives (FN) is the total number of outcomes where the model incorrectly predicts the negative class.
+    TP : integer
+         True Positives (TP) is the total number of outcomes where the model correctly predicts the positive class.
+
     Returns
     -------
-    sum : float
-        Sum of values
-    
+    sum : DataFrame
+          DataFrame with several metrics
+
     Notes
     -----
     https://en.wikipedia.org/wiki/Confusion_matrix
     https://developer.lsst.io/python/numpydoc.html
+    https://www.mathworks.com/help/risk/explore-fairness-metrics-for-credit-scoring-model.html
     
     Examples
     --------
@@ -391,21 +404,31 @@ mcm(tn, fp, fn, tp)
     </tr>
     <tr>
       <th>11</th>
+      <td>Rate of Positive Predictions (PRR)</td>
+      <td>0.646154</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Rate of Negative Predictions (RNP)</td>
+      <td>0.353846</td>
+    </tr>
+    <tr>
+      <th>13</th>
       <td>Accuracy</td>
       <td>0.769231</td>
     </tr>
     <tr>
-      <th>12</th>
+      <th>14</th>
       <td>F1 Score</td>
       <td>0.831461</td>
     </tr>
     <tr>
-      <th>13</th>
+      <th>15</th>
       <td>Positive Likelihood Ratio (LR+)</td>
       <td>2.834043</td>
     </tr>
     <tr>
-      <th>14</th>
+      <th>16</th>
       <td>Negative Likelihood Ratio (LR-)</td>
       <td>0.294599</td>
     </tr>
@@ -482,128 +505,143 @@ pd\
   <tbody>
     <tr>
       <th>Accuracy</th>
-      <td>0.767500</td>
+      <td>0.769423</td>
       <td>0.769231</td>
       <td>0.711538</td>
       <td>0.826923</td>
-      <td>0.025800</td>
+      <td>0.026687</td>
     </tr>
     <tr>
       <th>F1 Score</th>
-      <td>0.830278</td>
+      <td>0.830781</td>
       <td>0.828571</td>
-      <td>0.794118</td>
-      <td>0.880000</td>
-      <td>0.020213</td>
+      <td>0.769231</td>
+      <td>0.883117</td>
+      <td>0.022230</td>
     </tr>
     <tr>
       <th>False Discovery Rate (FDR)</th>
-      <td>0.119385</td>
+      <td>0.120614</td>
       <td>0.121212</td>
-      <td>0.057143</td>
-      <td>0.156250</td>
-      <td>0.024744</td>
+      <td>0.055556</td>
+      <td>0.166667</td>
+      <td>0.024679</td>
     </tr>
     <tr>
       <th>False Negative Rate (FNR)</th>
-      <td>0.213905</td>
-      <td>0.216216</td>
-      <td>0.138889</td>
-      <td>0.263158</td>
-      <td>0.028851</td>
+      <td>0.212029</td>
+      <td>0.210526</td>
+      <td>0.131579</td>
+      <td>0.285714</td>
+      <td>0.031126</td>
     </tr>
     <tr>
       <th>False Positive Rate (FPR)</th>
-      <td>0.281694</td>
+      <td>0.278755</td>
       <td>0.285714</td>
       <td>0.142857</td>
       <td>0.454545</td>
-      <td>0.058819</td>
+      <td>0.053325</td>
     </tr>
     <tr>
       <th>Negative Likelihood Ratio (LR-)</th>
-      <td>0.299955</td>
-      <td>0.296296</td>
-      <td>0.202020</td>
-      <td>0.447154</td>
-      <td>0.049006</td>
+      <td>0.295672</td>
+      <td>0.294840</td>
+      <td>0.184211</td>
+      <td>0.416667</td>
+      <td>0.049432</td>
     </tr>
     <tr>
       <th>Negative Predictive Value (NPV)</th>
-      <td>0.559698</td>
-      <td>0.555556</td>
+      <td>0.568801</td>
+      <td>0.571429</td>
       <td>0.375000</td>
-      <td>0.705882</td>
-      <td>0.058436</td>
+      <td>0.722222</td>
+      <td>0.054842</td>
     </tr>
     <tr>
       <th>Positive Likelihood Ratio (LR+)</th>
-      <td>2.927705</td>
-      <td>2.800498</td>
-      <td>1.663415</td>
-      <td>5.526316</td>
-      <td>0.707941</td>
+      <td>2.942235</td>
+      <td>2.855263</td>
+      <td>1.824390</td>
+      <td>5.710526</td>
+      <td>0.641786</td>
     </tr>
     <tr>
       <th>Positive Predictive Value (PPV)</th>
-      <td>0.880615</td>
+      <td>0.879386</td>
       <td>0.878788</td>
-      <td>0.843750</td>
-      <td>0.942857</td>
-      <td>0.024744</td>
+      <td>0.833333</td>
+      <td>0.944444</td>
+      <td>0.024679</td>
     </tr>
     <tr>
       <th>Precision</th>
-      <td>0.880615</td>
+      <td>0.879386</td>
       <td>0.878788</td>
-      <td>0.843750</td>
-      <td>0.942857</td>
-      <td>0.024744</td>
+      <td>0.833333</td>
+      <td>0.944444</td>
+      <td>0.024679</td>
+    </tr>
+    <tr>
+      <th>Rate of Negative Predictions (RNP)</th>
+      <td>0.354346</td>
+      <td>0.365385</td>
+      <td>0.250000</td>
+      <td>0.423077</td>
+      <td>0.030707</td>
+    </tr>
+    <tr>
+      <th>Rate of Positive Predictions (PRR)</th>
+      <td>0.645654</td>
+      <td>0.634615</td>
+      <td>0.576923</td>
+      <td>0.750000</td>
+      <td>0.030707</td>
     </tr>
     <tr>
       <th>Recall</th>
-      <td>0.786095</td>
-      <td>0.783784</td>
-      <td>0.736842</td>
-      <td>0.861111</td>
-      <td>0.028851</td>
+      <td>0.787971</td>
+      <td>0.789474</td>
+      <td>0.714286</td>
+      <td>0.868421</td>
+      <td>0.031126</td>
     </tr>
     <tr>
       <th>Sensitivity</th>
-      <td>0.786095</td>
-      <td>0.783784</td>
-      <td>0.736842</td>
-      <td>0.861111</td>
-      <td>0.028851</td>
+      <td>0.787971</td>
+      <td>0.789474</td>
+      <td>0.714286</td>
+      <td>0.868421</td>
+      <td>0.031126</td>
     </tr>
     <tr>
       <th>Specificity</th>
-      <td>0.718306</td>
+      <td>0.721245</td>
       <td>0.714286</td>
       <td>0.545455</td>
       <td>0.857143</td>
-      <td>0.058819</td>
+      <td>0.053325</td>
     </tr>
     <tr>
       <th>True Negative Rate (TNR)</th>
-      <td>0.718306</td>
+      <td>0.721245</td>
       <td>0.714286</td>
       <td>0.545455</td>
       <td>0.857143</td>
-      <td>0.058819</td>
+      <td>0.053325</td>
     </tr>
     <tr>
       <th>True Positive rate (TPR)</th>
-      <td>0.786095</td>
-      <td>0.783784</td>
-      <td>0.736842</td>
-      <td>0.861111</td>
-      <td>0.028851</td>
+      <td>0.787971</td>
+      <td>0.789474</td>
+      <td>0.714286</td>
+      <td>0.868421</td>
+      <td>0.031126</td>
     </tr>
   </tbody>
 </table>
 </div>
-
 
 
 ## Display
@@ -637,18 +675,12 @@ With seaborn is easy to display the distribution of all metrics.
 
 
 ```python
-g = sns.FacetGrid(pd.concat(mcm_bootstrap), 
-                  col = 'Metric', 
-                  col_wrap = 5, 
-                  sharey = False, 
+g = sns.FacetGrid(pd.concat(mcm_bootstrap),
+                  col = 'Metric',
+                  col_wrap = 5,
+                  sharey = False,
                   sharex = False)
-g = g.map(sns.distplot, 'Value', 
-          hist = True, 
-          kde = True, 
-          rug = True, 
-          hist_kws = {'color': 'C0'}, 
-          kde_kws = {'color': 'red', 'linewidth': 2}, 
-          rug_kws = {'color': 'black'})
+g = g.map(sns.histplot, 'Value', bins = 12, kde = True, ec = 'white', )
 g = g.set_titles('{col_name}', size = 12)
 ```
 
@@ -663,7 +695,7 @@ The `mcm` function can help us to analyse a confusion matrix. If this confusion 
 ## pylint
 
 ```
-$ pylint mcm.py --good-names=tn.fp,fn,tp
+$ pylint mcm.py --good-names=tn,fp,fn,tp
 --------------------------------------------------------------------
 Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 ```
