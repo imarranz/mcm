@@ -70,8 +70,8 @@ def mcm(tn, fp, fn, tp):
     df_mcm.append(['False Positive Rate (FPR)', fp / (fp + tn)])
     df_mcm.append(['False Discovery Rate (FDR)', fp / (fp + tp)])
 
-    df_mcm.append(['Rate of Positive Predictions (PRR)'], (fp + tp) / (tn + tp + fn + fp))
-    df_mcm.append(['Rate of Negative Predictions (RNP)'], (fn + tn) / (tn + tp + fn + fp))
+    df_mcm.append(['Rate of Positive Predictions (PRR)', (fp + tp) / (tn + tp + fn + fp)])
+    df_mcm.append(['Rate of Negative Predictions (RNP)', (fn + tn) / (tn + tp + fn + fp)])
 
     df_mcm.append(['Accuracy', (tp + tn) / (tp + tn + fp + fn)])
     df_mcm.append(['F1 Score', 2*tp / (2*tp + fp + fn)])
