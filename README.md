@@ -1,4 +1,25 @@
-# README
+# MCM
+
+<p align="center">
+  <img src="https://repository-images.githubusercontent.com/348323226/35d54755-0b13-420a-9e26-9483d2cc7b43" alt="mcm">
+</p>
+
+<p align="center">
+  <a href="https://github.com/imarranz/mcm/pulls">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?longCache=true" alt="Pull Requests">
+  </a>
+  <a href="LICENSE.md">
+    <img src="https://img.shields.io/badge/License-MIT-red.svg?longCache=true" alt="MIT License">
+  </a>
+   <a href="https://github.com/imarranz/mcm"><img src="https://img.shields.io/github/stars/imarranz/mcm" alt="Stars"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://twitter.com/imarranz" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/imarranz.svg?logo=twitter">
+  </a>
+</p>
 
 ## Introduction
 
