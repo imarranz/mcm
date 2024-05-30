@@ -25,7 +25,46 @@
 
 The `mcm` function is a simple tool for analyzed different metrics from a confusion matrix. Can be very useful to analyze the performance of a binary classification model. 
 
-This function depends of `pandas` and the function `confusion_matrix` from `sklearn.metrics`. With `confusion_matrix` the True Negative (TN) cases, True Positive (TP) cases, False Negative (FN) cases and False Positive (FP cases are calculated).
+This function depends of `pandas` and the function `confusion_matrix` from `sklearn.metrics`. With `confusion_matrix` the True Negative (TN) cases, True Positive (TP) cases, False Negative (FN) cases and False Positive (FP cases) are calculated.
+
+The following table categorizes predicted and actual conditions into four fundamental outcomes: True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN).
+
+Here are some key sections and their purpose:
+
+*  **Basic Definitions**:
+
+   - Defines TP, TN, FP, and FN, which are the basic building blocks for further calculations.
+
+* **Rates and Values**:
+
+   - **True Positive Rate (TPR)**: Also known as recall or sensitivity, measures the proportion of actual positives correctly identified.
+   - **False Positive Rate (FPR)**: Measures the proportion of actual negatives incorrectly identified as positive.
+   - **True Negative Rate (TNR)**: Also known as specificity, measures the proportion of actual negatives correctly identified.
+   - **False Negative Rate (FNR)**: Measures the proportion of actual positives that were not detected.
+
+* **Predictive Values**:
+
+   - **Positive Predictive Value (PPV)**: Also known as precision, measures the proportion of predicted positives that are true positives.
+   - **Negative Predictive Value (NPV)**: Measures the proportion of predicted negatives that are true negatives.
+
+* **Composite Metrics**:
+
+   - **Accuracy (ACC)**: Overall effectiveness of the classifier, measuring the proportion of true results (both true positives and true negatives).
+   - **F1 Score**: Harmonic mean of precision and recall, balancing the two metrics.
+   - **Matthews Correlation Coefficient (MCC)**: Measures the quality of binary classifications, robust even if classes are of very different sizes.
+
+* **Advanced Ratios**:
+
+   - **Likelihood Ratios (LR+ and LR-)**: Measure how much a test result will change the odds of having a condition.
+   - **Diagnostic Odds Ratio (DOR)**: Ratio of the odds of the test being positive if the subject has a condition versus if the subject does not have the condition.
+
+The table is designed to help in the interpretation of test results, particularly in the context of diagnostic tests or in the performance evaluation of classification algorithms. Each metric provides a different insight into the accuracy and reliability of the test or model, allowing practitioners to assess its effectiveness comprehensively.
+
+The table below illustrates the confusion matrix used in our analysis. This matrix visualizes the performance of the classification algorithm, highlighting the true positives, true negatives, false positives, and false negatives. Understanding these values is crucial for evaluating the accuracy and reliability of our model.
+
+![](figures/confusion_matrix.jpeg)
+
+The following Python code demonstrates how to generate a confusion matrix using the `pandas` and `sklearn.metrics` libraries. This matrix is pivotal for calculating various performance metrics, such as precision and recall, which help further assess the effectiveness of the model.
 
 
 ```python
@@ -37,7 +76,6 @@ from sklearn.metrics import confusion_matrix
 ```python
 ?confusion_matrix
 ```
-
 
     Compute confusion matrix to evaluate the accuracy of a classification.
     
