@@ -62,7 +62,7 @@ The table is designed to help in the interpretation of test results, particularl
 
 The table below illustrates the confusion matrix used in our analysis. This matrix visualizes the performance of the classification algorithm, highlighting the true positives, true negatives, false positives, and false negatives. Understanding these values is crucial for evaluating the accuracy and reliability of our model.
 
-![](figures/confusion_matrix.jpeg)
+![confusion matrix](./figures/confusion_matrix.jpeg)
 
 The following Python code demonstrates how to generate a confusion matrix using the `pandas` and `sklearn.metrics` libraries. This matrix is pivotal for calculating various performance metrics, such as precision and recall, which help further assess the effectiveness of the model.
 
